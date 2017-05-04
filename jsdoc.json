@@ -1,0 +1,59 @@
+{
+  "classes": [
+    {
+      "name": "TheUserResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserResource",
+        "description": "User fresource for the-db",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserResource",
+        "description": "User fresource for the-db",
+        "parameters": [],
+        "examples": []
+      }
+    }
+  ],
+  "functions": [
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create a TheUserResource instance",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "*",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "TheUserResource",
+        "description": ""
+      }
+    }
+  ]
+}
