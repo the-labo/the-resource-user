@@ -137,14 +137,14 @@ async function tryExample () {
 
   // Start user session
   async function signin (username, password, options = {}) {
-    let { key } = options
+    let { agent } = options
     let user = await User.only({ username })
     let sign = user && await UserSign.only({ user })
     let valid = sign && await sign.testPassword(password)
     if (!valid) {
       throw new Error('Signin failed!')
     }
-    let { token, expiredAt } = await UserSession.create({ key, sign })
+    let { token, expiredAt } = await UserSession.create({ agent, sign })
     await user.sync()
     return { token, expiredAt, user }
   }

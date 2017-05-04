@@ -1,6 +1,6 @@
 {
   "name": "the-resource-user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "User resource for the-db",
   "main": "shim",
   "scripts": {

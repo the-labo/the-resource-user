@@ -176,10 +176,10 @@
       "type": ""
     },
     {
-      "name": "key",
+      "name": "agent",
       "access": "",
       "virtual": false,
-      "description": "Key string to identify session",
+      "description": "User agent",
       "type": ""
     },
     {
@@ -253,6 +253,13 @@
       "type": ""
     },
     {
+      "name": "target",
+      "access": "",
+      "virtual": false,
+      "description": "Verify target",
+      "type": ""
+    },
+    {
       "name": "token",
       "access": "",
       "virtual": false,
@@ -264,6 +271,13 @@
       "access": "",
       "virtual": false,
       "description": "Date expire",
+      "type": ""
+    },
+    {
+      "name": "done",
+      "access": "",
+      "virtual": false,
+      "description": "Done or not",
       "type": ""
     }
   ],
