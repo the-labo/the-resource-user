@@ -1,7 +1,7 @@
 {
   "classes": [
     {
-      "name": "TheUserResource",
+      "name": "TheUserProfileResource",
       "description": "",
       "extends": [
         "Resource"
@@ -10,8 +10,8 @@
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "TheUserResource",
-        "description": "User fresource for the-db",
+        "name": "TheUserProfileResource",
+        "description": "Profile for user",
         "parameters": [],
         "examples": []
       }
@@ -27,13 +27,268 @@
       "fires": "",
       "constructor": {
         "name": "TheUserResource",
-        "description": "User fresource for the-db",
+        "description": "User\nresource for the-db",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserRoleResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserRoleResource",
+        "description": "Role for user",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserSessionResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserSessionResource",
+        "description": "Session for user",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserSignResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserSignResource",
+        "description": "Sign for user",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserVerifyResource",
+      "description": "",
+      "extends": [
+        "Resource"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserVerifyResource",
+        "description": "Verify for user",
         "parameters": [],
         "examples": []
       }
     }
   ],
+  "properties": [
+    {
+      "name": "user",
+      "access": "",
+      "virtual": false,
+      "description": "Pointer to user entity",
+      "type": ""
+    },
+    {
+      "name": "name",
+      "access": "",
+      "virtual": false,
+      "description": "Actual name of the user",
+      "type": ""
+    },
+    {
+      "name": "image",
+      "access": "",
+      "virtual": false,
+      "description": "Profile image",
+      "type": ""
+    },
+    {
+      "name": "name",
+      "access": "",
+      "virtual": false,
+      "description": "Name to identify the user",
+      "type": ""
+    },
+    {
+      "name": "email",
+      "access": "",
+      "virtual": false,
+      "description": "User email",
+      "type": ""
+    },
+    {
+      "name": "profile",
+      "access": "",
+      "virtual": false,
+      "description": "Use profile data",
+      "type": ""
+    },
+    {
+      "name": "sign",
+      "access": "",
+      "virtual": false,
+      "description": "User signature",
+      "type": ""
+    },
+    {
+      "name": "roles",
+      "access": "",
+      "virtual": false,
+      "description": "Use roles",
+      "type": ""
+    },
+    {
+      "name": "user",
+      "access": "",
+      "virtual": false,
+      "description": "Pointer to user entity",
+      "type": ""
+    },
+    {
+      "name": "code",
+      "access": "",
+      "virtual": false,
+      "description": "Role code",
+      "type": ""
+    },
+    {
+      "name": "user",
+      "access": "",
+      "virtual": false,
+      "description": "Pointer to user entity",
+      "type": ""
+    },
+    {
+      "name": "key",
+      "access": "",
+      "virtual": false,
+      "description": "Key string to identify session",
+      "type": ""
+    },
+    {
+      "name": "token",
+      "access": "",
+      "virtual": false,
+      "description": "Session token",
+      "type": ""
+    },
+    {
+      "name": "since",
+      "access": "",
+      "virtual": false,
+      "description": "Started at",
+      "type": ""
+    },
+    {
+      "name": "lifetime",
+      "access": "",
+      "virtual": false,
+      "description": "Milliseconds to duration of the session",
+      "type": ""
+    },
+    {
+      "name": "expiredAt",
+      "access": "",
+      "virtual": false,
+      "description": "The date entity expired",
+      "type": ""
+    },
+    {
+      "name": "user",
+      "access": "",
+      "virtual": false,
+      "description": "Pointer to user entity",
+      "type": ""
+    },
+    {
+      "name": "password",
+      "access": "",
+      "virtual": false,
+      "description": "Password string",
+      "type": ""
+    },
+    {
+      "name": "passwordHash",
+      "access": "",
+      "virtual": false,
+      "description": "Sign code",
+      "type": ""
+    },
+    {
+      "name": "salt",
+      "access": "",
+      "virtual": false,
+      "description": "Salt of password",
+      "type": ""
+    },
+    {
+      "name": "algorithm",
+      "access": "",
+      "virtual": false,
+      "description": "Digest algorithm",
+      "type": ""
+    },
+    {
+      "name": "user",
+      "access": "",
+      "virtual": false,
+      "description": "Pointer to user entity",
+      "type": ""
+    },
+    {
+      "name": "token",
+      "access": "",
+      "virtual": false,
+      "description": "Verify token",
+      "type": ""
+    },
+    {
+      "name": "expiredAt",
+      "access": "",
+      "virtual": false,
+      "description": "Date expire",
+      "type": ""
+    }
+  ],
   "functions": [
+    {
+      "name": "testPassword",
+      "access": "",
+      "virtual": false,
+      "description": "Test if password matches",
+      "parameters": [
+        {
+          "name": "password",
+          "type": "string",
+          "description": "Password string to check",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "boolean",
+        "description": "Matched or not"
+      }
+    },
     {
       "name": "create",
       "access": "",

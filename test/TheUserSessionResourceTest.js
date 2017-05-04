@@ -1,13 +1,13 @@
 /**
- * Test for TheUserProfileResource.
+ * Test for TheUserSessionResource.
  * Runs with mocha.
  */
 'use strict'
 
-const TheUserProfileResource = require('../lib/TheUserProfileResource')
+const TheUserSessionResource = require('../lib/TheUserSessionResource')
 const { ok, equal } = require('assert')
 
-describe('the-user-profile-resource', () => {
+describe('the-user-session-resource', () => {
   before(() => {
   })
 
@@ -15,7 +15,7 @@ describe('the-user-profile-resource', () => {
   })
 
   it('Do test', () => {
-    ok(TheUserProfileResource)
+    ok(TheUserSessionResource)
   })
 })
 

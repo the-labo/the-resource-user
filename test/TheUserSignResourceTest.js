@@ -5,6 +5,7 @@
 'use strict'
 
 const { TheDb } = require('the-db')
+const TheUserResource = require('../lib/TheUserResource')
 const TheUserSignResource = require('../lib/TheUserSignResource')
 const { ok, equal } = require('assert')
 
@@ -19,14 +20,17 @@ describe('the-user-sign-resource', () => {
     ok(TheUserSignResource)
 
     let db = new TheDb({
-      dialect: 'memory',
-      resources: {
-        TheUserSignResource: TheUserSignResource
-      }
-    })
+      dialect: 'memory'
+    }).load([
+      TheUserResource,
+      TheUserSignResource
+    ])
 
-    let resource = db.resource('TheUserSignResource')
-    let sign01 = await resource.create({
+    const User = db.resources[ TheUserResource.nameString ]
+    const UserSign = db.resources[ TheUserSignResource.nameString ]
+    let user01 = await User.create({ name: 'hoge' })
+    let sign01 = await UserSign.create({
+      user: user01,
       password: 'foo'
     })
     ok(sign01.salt)

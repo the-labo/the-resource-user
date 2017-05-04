@@ -2,66 +2,94 @@
 
 const theDb = require('the-db')
 const {
-  TheUserResource: TheUser
+  TheUserResource
 } = require('the-resource-user')
 
-async function tryExample () {
-  let db = theDb({
-    dialect: 'memory',
-    resources: {
-      User: class UserResource extends TheUser {/* ... */},
-      UserSign: class UserSignResource extends TheUser.Sign {/* ... */},
-      UserSession: class UserSessionResource extends TheUser.Session {/* ... */},
-      UserProfile: class UserProfileResource extends TheUser.Profile {/* ... */},
-      UserRole: class UserRoleResource extends TheUser.Role {/* ... */}
+// Define Custom classes
+const ResourceClasses = [
+  class extends TheUserResource {
+    static get nameString () {
+      return 'User'
     }
-  })
+  },
+  class extends TheUserResource.Sign {
+    static get nameString () {
+      return 'UserSign'
+    }
+  },
+  class extends TheUserResource.Session {
+    static get nameString () {
+      return 'UserSession'
+    }
+  },
+  class extends TheUserResource.Profile {
+    static get nameString () {
+      return 'UserProfile'
+    }
+  },
+  class extends TheUserResource.Role {
+    static get nameString () {
+      return 'UserRole'
+    }
+  }
+]
 
-  let userResource = db.resource('User')
-  let userSignResource = db.resource('UserSign')
-  let userSessionResource = db.resource('UserSession')
-  let userProfileResource = db.resource('UserProfile')
-  let userRoleResource = db.resource('UserRole')
+async function tryExample () {
+
+  // Create a db instance
+  let db = theDb({
+    dialect: 'memory'
+  }).load(ResourceClasses)
+
+  let {
+    User,
+    UserSign,
+    UserSession,
+    UserProfile,
+    UserRole
+  } = db.resources
 
   // Signup an user
   async function signup (username, password, options = {}) {
     let { email = null, profile = {}, roles = [] } = options
-    let user = await userResource.create({ username, email })
-    user.sign = await userSignResource.create({ password })
-    user.profile = await userProfileResource.create({ profile })
-    user.roles = await userRoleResource.createBulk(roles.map((code) => ({ code, user })))
-    await user.save()
+    let user = await User.create({ username, email })
+    user.sign = await UserSign.create({ user, password })
+    user.profile = await UserProfile.create({ user, profile })
+    user.roles = await UserRole.createBulk(roles.map((code) => ({ user, code })))
+    await
+      user.save()
     return user
   }
 
   // Start user session
   async function signin (username, password, options = {}) {
-    let { key } = options
-    let user = await userResource.only({ username })
-    let sign = user && await userSignResource.only({ user })
+    let { agent } = options
+    let user = await User.only({ username })
+    let sign = user && await UserSign.only({ user })
     let valid = sign && await sign.testPassword(password)
     if (!valid) {
       throw new Error('Signin failed!')
     }
-    let { token, expiredAt } = await userSessionResource.create({ key, sign })
+    let { token, expiredAt } = await UserSession.create({ agent, sign })
     await user.sync()
     return { token, expiredAt, user }
   }
 
   // Finish session
   async function signout (token) {
-    let session = await userSignResource.only({ token })
+    let session = await UserSign.only({ token })
     return session && session.destroy()
   }
 
+  // Call the functions
   {
-    signup('user01', 'xxxxxxxx', {
+    await signup('user01', 'xxxxxxxx', {
       roles: [ 'OPERATOR', 'CONSUMER' ]
     })
 
     let { token } = signin('user01', 'xxxxxxxx')
     /* ... */
-    signout(token)
+    await signout(token)
   }
 }
 

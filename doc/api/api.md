@@ -1,6 +1,6 @@
 # the-resource-user@1.0.0
 
-User fresource for the-db
+User resource for the-db
 
 + Functions
   + [create(args)](#the-resource-user-function-create)
@@ -25,7 +25,8 @@ Create a TheUserResource instance
 
 ## `TheUserResource` Class
 
-User fresource for the-db
+User
+resource for the-db
 
 **Extends**: 
 

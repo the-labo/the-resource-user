@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const theUserRoleResource = require('../lib/TheUserRoleResource')
+const TheUserRoleResource = require('../lib/TheUserRoleResource')
 const { ok, equal } = require('assert')
 
 describe('the-user-role-resource', () => {
@@ -15,7 +15,7 @@ describe('the-user-role-resource', () => {
   })
 
   it('Do test', () => {
-
+    ok(TheUserRoleResource)
   })
 })
 
