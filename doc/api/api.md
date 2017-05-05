@@ -10,6 +10,8 @@ User resource for the-db
   + [new TheUserProfileResourceEntity()](#the-resource-user-classes-the-user-profile-resource-entity-constructor)
 + [`TheUserResource`](#the-resource-user-classes) Class
   + [new TheUserResource()](#the-resource-user-classes-the-user-resource-constructor)
++ [`TheUserResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserResourceEntity()](#the-resource-user-classes-the-user-resource-entity-constructor)
 + [`TheUserRoleResource`](#the-resource-user-classes) Class
   + [new TheUserRoleResource()](#the-resource-user-classes-the-user-role-resource-constructor)
 + [`TheUserRoleResourceEntity`](#the-resource-user-classes) Class
@@ -97,6 +99,23 @@ resource for the-db
 ### new TheUserResource()
 
 Constructor of TheUserResource class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
+## `TheUserResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-resource-entity-constructor" ></a>
+
+### new TheUserResourceEntity()
+
+Constructor of TheUserResourceEntity class
 
 
 

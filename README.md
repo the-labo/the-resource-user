@@ -161,6 +161,7 @@ API Guide
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
   + [TheUserResource](./doc/api/api.md#the-user-resource-class)
+  + [TheUserResourceEntity](./doc/api/api.md#the-user-resource-entity-class)
   + [TheUserRoleResource](./doc/api/api.md#the-user-role-resource-class)
   + [TheUserRoleResourceEntity](./doc/api/api.md#the-user-role-resource-entity-class)
   + [TheUserSessionResource](./doc/api/api.md#the-user-session-resource-class)
