@@ -6,16 +6,27 @@ User resource for the-db
   + [create(args)](#the-resource-user-function-create)
 + [`TheUserProfileResource`](#the-resource-user-classes) Class
   + [new TheUserProfileResource()](#the-resource-user-classes-the-user-profile-resource-constructor)
++ [`TheUserProfileResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserProfileResourceEntity()](#the-resource-user-classes-the-user-profile-resource-entity-constructor)
 + [`TheUserResource`](#the-resource-user-classes) Class
   + [new TheUserResource()](#the-resource-user-classes-the-user-resource-constructor)
 + [`TheUserRoleResource`](#the-resource-user-classes) Class
   + [new TheUserRoleResource()](#the-resource-user-classes-the-user-role-resource-constructor)
++ [`TheUserRoleResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserRoleResourceEntity()](#the-resource-user-classes-the-user-role-resource-entity-constructor)
 + [`TheUserSessionResource`](#the-resource-user-classes) Class
   + [new TheUserSessionResource()](#the-resource-user-classes-the-user-session-resource-constructor)
++ [`TheUserSessionResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserSessionResourceEntity()](#the-resource-user-classes-the-user-session-resource-entity-constructor)
 + [`TheUserSignResource`](#the-resource-user-classes) Class
   + [new TheUserSignResource()](#the-resource-user-classes-the-user-sign-resource-constructor)
++ [`TheUserSignResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserSignResourceEntity()](#the-resource-user-classes-the-user-sign-resource-entity-constructor)
+  + [entity.testPassword(password)](#the-resource-user-classes-the-user-sign-resource-entity-testPassword)
 + [`TheUserVerifyResource`](#the-resource-user-classes) Class
   + [new TheUserVerifyResource()](#the-resource-user-classes-the-user-verify-resource-constructor)
++ [`TheUserVerifyResourceEntity`](#the-resource-user-classes) Class
+  + [new TheUserVerifyResourceEntity()](#the-resource-user-classes-the-user-verify-resource-entity-constructor)
 
 ## Functions
 
@@ -48,6 +59,23 @@ Profile for user
 ### new TheUserProfileResource()
 
 Constructor of TheUserProfileResource class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
+## `TheUserProfileResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-profile-resource-entity-constructor" ></a>
+
+### new TheUserProfileResourceEntity()
+
+Constructor of TheUserProfileResourceEntity class
 
 
 
@@ -94,6 +122,23 @@ Constructor of TheUserRoleResource class
 
 <a class='md-heading-link' name="the-resource-user-classes"></a>
 
+## `TheUserRoleResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-role-resource-entity-constructor" ></a>
+
+### new TheUserRoleResourceEntity()
+
+Constructor of TheUserRoleResourceEntity class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
 ## `TheUserSessionResource` Class
 
 Session for user
@@ -109,6 +154,23 @@ Session for user
 ### new TheUserSessionResource()
 
 Constructor of TheUserSessionResource class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
+## `TheUserSessionResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-session-resource-entity-constructor" ></a>
+
+### new TheUserSessionResourceEntity()
+
+Constructor of TheUserSessionResourceEntity class
 
 
 
@@ -134,6 +196,34 @@ Constructor of TheUserSignResource class
 
 <a class='md-heading-link' name="the-resource-user-classes"></a>
 
+## `TheUserSignResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-sign-resource-entity-constructor" ></a>
+
+### new TheUserSignResourceEntity()
+
+Constructor of TheUserSignResourceEntity class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-sign-resource-entity-testPassword" ></a>
+
+### entity.testPassword(password) -> `boolean`
+
+Test if password matches
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| password | string | Password string to check |
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
 ## `TheUserVerifyResource` Class
 
 Verify for user
@@ -149,6 +239,23 @@ Verify for user
 ### new TheUserVerifyResource()
 
 Constructor of TheUserVerifyResource class
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes"></a>
+
+## `TheUserVerifyResourceEntity` Class
+
+
+
+
+
+
+<a class='md-heading-link' name="the-resource-user-classes-the-user-verify-resource-entity-constructor" ></a>
+
+### new TheUserVerifyResourceEntity()
+
+Constructor of TheUserVerifyResourceEntity class
 
 
 

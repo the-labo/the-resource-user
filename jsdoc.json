@@ -17,6 +17,20 @@
       }
     },
     {
+      "name": "TheUserProfileResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserProfileResourceEntity",
+        "description": "",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
       "name": "TheUserResource",
       "description": "",
       "extends": [
@@ -28,6 +42,20 @@
       "constructor": {
         "name": "TheUserResource",
         "description": "User\nresource for the-db",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserResourceEntity",
+        "description": "",
         "parameters": [],
         "examples": []
       }
@@ -49,6 +77,20 @@
       }
     },
     {
+      "name": "TheUserRoleResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserRoleResourceEntity",
+        "description": "",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
       "name": "TheUserSessionResource",
       "description": "",
       "extends": [
@@ -63,6 +105,29 @@
         "parameters": [],
         "examples": []
       }
+    },
+    {
+      "name": "TheUserSessionResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserSessionResourceEntity",
+        "description": "",
+        "parameters": [],
+        "examples": []
+      },
+      "properties": [
+        {
+          "name": "expiredAt",
+          "access": "",
+          "virtual": false,
+          "description": "The date entity expired",
+          "type": ""
+        }
+      ]
     },
     {
       "name": "TheUserSignResource",
@@ -81,6 +146,43 @@
       }
     },
     {
+      "name": "TheUserSignResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserSignResourceEntity",
+        "description": "",
+        "parameters": [],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "testPassword",
+          "access": "",
+          "virtual": false,
+          "description": "Test if password matches",
+          "parameters": [
+            {
+              "name": "password",
+              "type": "string",
+              "description": "Password string to check",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "boolean",
+            "description": "Matched or not"
+          }
+        }
+      ]
+    },
+    {
       "name": "TheUserVerifyResource",
       "description": "",
       "extends": [
@@ -92,6 +194,20 @@
       "constructor": {
         "name": "TheUserVerifyResource",
         "description": "Verify for user",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
+      "name": "TheUserVerifyResourceEntity",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheUserVerifyResourceEntity",
+        "description": "",
         "parameters": [],
         "examples": []
       }
@@ -204,13 +320,6 @@
       "type": ""
     },
     {
-      "name": "expiredAt",
-      "access": "",
-      "virtual": false,
-      "description": "The date entity expired",
-      "type": ""
-    },
-    {
       "name": "user",
       "access": "",
       "virtual": false,
@@ -282,27 +391,6 @@
     }
   ],
   "functions": [
-    {
-      "name": "testPassword",
-      "access": "",
-      "virtual": false,
-      "description": "Test if password matches",
-      "parameters": [
-        {
-          "name": "password",
-          "type": "string",
-          "description": "Password string to check",
-          "default": "",
-          "optional": "",
-          "nullable": ""
-        }
-      ],
-      "examples": [],
-      "returns": {
-        "type": "boolean",
-        "description": "Matched or not"
-      }
-    },
     {
       "name": "create",
       "access": "",

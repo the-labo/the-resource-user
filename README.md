@@ -159,11 +159,16 @@ API Guide
 + [the-resource-user@1.0.2](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
+  + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
   + [TheUserResource](./doc/api/api.md#the-user-resource-class)
   + [TheUserRoleResource](./doc/api/api.md#the-user-role-resource-class)
+  + [TheUserRoleResourceEntity](./doc/api/api.md#the-user-role-resource-entity-class)
   + [TheUserSessionResource](./doc/api/api.md#the-user-session-resource-class)
+  + [TheUserSessionResourceEntity](./doc/api/api.md#the-user-session-resource-entity-class)
   + [TheUserSignResource](./doc/api/api.md#the-user-sign-resource-class)
+  + [TheUserSignResourceEntity](./doc/api/api.md#the-user-sign-resource-entity-class)
   + [TheUserVerifyResource](./doc/api/api.md#the-user-verify-resource-class)
+  + [TheUserVerifyResourceEntity](./doc/api/api.md#the-user-verify-resource-entity-class)
 
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" End -->

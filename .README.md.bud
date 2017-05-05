@@ -25,11 +25,17 @@ module.exports = readmeMdBud({
       {
         classNames: [
           'TheUserProfileResource',
+          'TheUserProfileResourceEntity',
           'TheUserResource',
+          'TheUserResourceEntity',
           'TheUserRoleResource',
+          'TheUserRoleResourceEntity',
           'TheUserSessionResource',
+          'TheUserSessionResourceEntity',
           'TheUserSignResource',
-          'TheUserVerifyResource'
+          'TheUserSignResourceEntity',
+          'TheUserVerifyResource',
+          'TheUserVerifyResourceEntity'
         ],
         functionNames: [
           'create'

@@ -10,11 +10,17 @@ module.exports = api({
     {
       classNames: [
         'TheUserProfileResource',
+        'TheUserProfileResourceEntity',
         'TheUserResource',
+        'TheUserResourceEntity',
         'TheUserRoleResource',
+        'TheUserRoleResourceEntity',
         'TheUserSessionResource',
+        'TheUserSessionResourceEntity',
         'TheUserSignResource',
-        'TheUserVerifyResource'
+        'TheUserSignResourceEntity',
+        'TheUserVerifyResource',
+        'TheUserVerifyResourceEntity'
       ],
       functionNames: [ 'create' ]
     }
