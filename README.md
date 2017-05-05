@@ -165,7 +165,7 @@ Policies
 
 <a name="policy-TheUserResource"/>
 
-### TheUserResource
+### TheUserResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
@@ -177,7 +177,7 @@ Policies
 
 <a name="policy-TheUserProfileResource"/>
 
-### TheUserProfileResource
+### TheUserProfileResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
@@ -187,7 +187,7 @@ Policies
 
 <a name="policy-TheUserRoleResource"/>
 
-### TheUserRoleResource
+### TheUserRoleResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
@@ -196,7 +196,7 @@ Policies
 
 <a name="policy-TheUserSignResource"/>
 
-### TheUserSignResource
+### TheUserSignResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
@@ -208,7 +208,7 @@ Policies
 
 <a name="policy-TheUserSessionResource"/>
 
-### TheUserSessionResource
+### TheUserSessionResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
@@ -220,7 +220,7 @@ Policies
 
 <a name="policy-TheUserVerifyResource"/>
 
-### TheUserVerifyResource
+### TheUserVerifyResource Policy
 
 | Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |

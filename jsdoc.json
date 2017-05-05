@@ -234,13 +234,6 @@
       "virtual": false,
       "description": "Profile image",
       "type": ""
-    },
-    {
-      "name": "lifetime",
-      "access": "",
-      "virtual": false,
-      "description": "Milliseconds to duration of the session",
-      "type": ""
     }
   ],
   "functions": [
