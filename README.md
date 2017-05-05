@@ -156,7 +156,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-resource-user@1.0.2](./doc/api/api.md)
++ [the-resource-user@1.0.3](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
