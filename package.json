@@ -2,7 +2,8 @@
   "name": "the-resource-user",
   "version": "1.0.3",
   "description": "User resource for the-db",
-  "main": "shim",
+  "browser": "shim",
+  "main": "lib",
   "scripts": {
     "build": "the-script-build",
     "doc": "the-script-jsdoc",
