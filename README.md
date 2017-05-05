@@ -149,31 +149,6 @@ tryExample().catch((err) => console.error(err))
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
-<!-- Section from "doc/guides/10.API Guide.md.hbs" Start -->
-
-<a name="section-doc-guides-10-a-p-i-guide-md"></a>
-
-API Guide
------
-
-+ [the-resource-user@1.0.4](./doc/api/api.md)
-  + [create(args)](./doc/api/api.md#the-resource-user-function-create)
-  + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
-  + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
-  + [TheUserResource](./doc/api/api.md#the-user-resource-class)
-  + [TheUserResourceEntity](./doc/api/api.md#the-user-resource-entity-class)
-  + [TheUserRoleResource](./doc/api/api.md#the-user-role-resource-class)
-  + [TheUserRoleResourceEntity](./doc/api/api.md#the-user-role-resource-entity-class)
-  + [TheUserSessionResource](./doc/api/api.md#the-user-session-resource-class)
-  + [TheUserSessionResourceEntity](./doc/api/api.md#the-user-session-resource-entity-class)
-  + [TheUserSignResource](./doc/api/api.md#the-user-sign-resource-class)
-  + [TheUserSignResourceEntity](./doc/api/api.md#the-user-sign-resource-entity-class)
-  + [TheUserVerifyResource](./doc/api/api.md#the-user-verify-resource-class)
-  + [TheUserVerifyResourceEntity](./doc/api/api.md#the-user-verify-resource-entity-class)
-
-
-<!-- Section from "doc/guides/10.API Guide.md.hbs" End -->
-
 <!-- Section from "doc/guides/11.Policies.md.hbs" Start -->
 
 <a name="section-doc-guides-11-policies-md"></a>
@@ -189,6 +164,7 @@ Policies
 + [TheUserVerifyResource Policy](#policy-TheUserVerifyResource)
 
 <a name="policy-TheUserResource"/>
+
 ### TheUserResource
 
 | Property | Description | Type | Required | Unique |
@@ -200,6 +176,7 @@ Policies
 | `roles` | Use roles | "cly:entity" |  |  |
 
 <a name="policy-TheUserProfileResource"/>
+
 ### TheUserProfileResource
 
 | Property | Description | Type | Required | Unique |
@@ -209,6 +186,7 @@ Policies
 | `image` |  | "cly:string" |  |  |
 
 <a name="policy-TheUserRoleResource"/>
+
 ### TheUserRoleResource
 
 | Property | Description | Type | Required | Unique |
@@ -217,6 +195,7 @@ Policies
 | `code` | Role code | "cly:string" | true | true |
 
 <a name="policy-TheUserSignResource"/>
+
 ### TheUserSignResource
 
 | Property | Description | Type | Required | Unique |
@@ -228,6 +207,7 @@ Policies
 | `algorithm` | Digest algorithm  | "cly:string" |  |  |
 
 <a name="policy-TheUserSessionResource"/>
+
 ### TheUserSessionResource
 
 | Property | Description | Type | Required | Unique |
@@ -236,9 +216,10 @@ Policies
 | `agent` | User agent | "cly:string" |  |  |
 | `token` | Session token | "cly:string" | true | true |
 | `since` | Started at | "cly:date" |  |  |
-| `lifetime` |  | "cly:number" |  |  |
+| `lifetime` | Milliseconds to duration of the session | "cly:number" |  |  |
 
 <a name="policy-TheUserVerifyResource"/>
+
 ### TheUserVerifyResource
 
 | Property | Description | Type | Required | Unique |
@@ -252,6 +233,31 @@ Policies
 
 
 <!-- Section from "doc/guides/11.Policies.md.hbs" End -->
+
+<!-- Section from "doc/guides/20.API Guide.md.hbs" Start -->
+
+<a name="section-doc-guides-20-a-p-i-guide-md"></a>
+
+API Guide
+-----
+
++ [the-resource-user@1.0.5](./doc/api/api.md)
+  + [create(args)](./doc/api/api.md#the-resource-user-function-create)
+  + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
+  + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
+  + [TheUserResource](./doc/api/api.md#the-user-resource-class)
+  + [TheUserResourceEntity](./doc/api/api.md#the-user-resource-entity-class)
+  + [TheUserRoleResource](./doc/api/api.md#the-user-role-resource-class)
+  + [TheUserRoleResourceEntity](./doc/api/api.md#the-user-role-resource-entity-class)
+  + [TheUserSessionResource](./doc/api/api.md#the-user-session-resource-class)
+  + [TheUserSessionResourceEntity](./doc/api/api.md#the-user-session-resource-entity-class)
+  + [TheUserSignResource](./doc/api/api.md#the-user-sign-resource-class)
+  + [TheUserSignResourceEntity](./doc/api/api.md#the-user-sign-resource-entity-class)
+  + [TheUserVerifyResource](./doc/api/api.md#the-user-verify-resource-class)
+  + [TheUserVerifyResourceEntity](./doc/api/api.md#the-user-verify-resource-entity-class)
+
+
+<!-- Section from "doc/guides/20.API Guide.md.hbs" End -->
 
 
 <!-- Sections Start -->
