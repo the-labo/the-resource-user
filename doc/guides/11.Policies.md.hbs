@@ -1,17 +1,19 @@
 Policies
 --------
 
-{{#if vars.policies}}
-+ {{name}}
-{{/if}}
+{{#each vars.policies}}
++ [{{name}} Policy](#policy-{{name}})
+{{/each}}
 
 {{#each vars.policies}}
+<a name="policy-{{name}}"/>
 ### {{name}}
+
 {{#if policy}}
-| Property | Type | Required | Unique | Example |
+| Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
 {{#each policy}}
-| `{{@key}}` | "{{type}}" | {{required}} | {{unique}} | {{#if default}}`{{default}}`{{/if}} |
+| `{{@key}}` | {{{description}}} | "{{type}}" | {{required}} | {{unique}} |
 {{/each}}
 {{else}} No policy defined.
 {{/if}}

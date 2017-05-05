@@ -181,56 +181,73 @@ API Guide
 Policies
 --------
 
-+ 
++ [TheUserResource Policy](#policy-TheUserResource)
++ [TheUserProfileResource Policy](#policy-TheUserProfileResource)
++ [TheUserRoleResource Policy](#policy-TheUserRoleResource)
++ [TheUserSignResource Policy](#policy-TheUserSignResource)
++ [TheUserSessionResource Policy](#policy-TheUserSessionResource)
++ [TheUserVerifyResource Policy](#policy-TheUserVerifyResource)
 
+<a name="policy-TheUserResource"/>
 ### TheUserResource
-| Property | Type | Required | Unique | default |
-| ----- | ----- | --- | --- | --- |
-| `name` | "cly:string" | true | true |  |
-| `email` | "cly:string" |  | true |  |
-| `profile` | "cly:entity" |  |  |  |
-| `sign` | "cly:entity" |  |  |  |
-| `roles` | "cly:entity" |  |  |  |
 
+| Property | Description | Type | Required | Unique |
+| ----- | ----- | --- | --- | --- |
+| `name` | Name to identify the user | "cly:string" | true | true |
+| `email` | User email | "cly:string" |  | true |
+| `profile` | Use profile | "cly:entity" |  |  |
+| `sign` | User signature | "cly:entity" |  |  |
+| `roles` | Use roles | "cly:entity" |  |  |
+
+<a name="policy-TheUserProfileResource"/>
 ### TheUserProfileResource
-| Property | Type | Required | Unique | default |
-| ----- | ----- | --- | --- | --- |
-| `user` | "cly:entity" | true |  |  |
-| `name` | "cly:string" |  |  |  |
-| `image` | "cly:string" |  |  |  |
 
+| Property | Description | Type | Required | Unique |
+| ----- | ----- | --- | --- | --- |
+| `user` |  | "cly:entity" | true |  |
+| `name` |  | "cly:string" |  |  |
+| `image` |  | "cly:string" |  |  |
+
+<a name="policy-TheUserRoleResource"/>
 ### TheUserRoleResource
-| Property | Type | Required | Unique | default |
-| ----- | ----- | --- | --- | --- |
-| `user` | "cly:entity" | true |  |  |
-| `code` | "cly:string" | true | true |  |
 
+| Property | Description | Type | Required | Unique |
+| ----- | ----- | --- | --- | --- |
+| `user` | Pointer to user entity | "cly:entity" | true |  |
+| `code` | Role code | "cly:string" | true | true |
+
+<a name="policy-TheUserSignResource"/>
 ### TheUserSignResource
-| Property | Type | Required | Unique | default |
-| ----- | ----- | --- | --- | --- |
-| `user` | "cly:entity" | true |  |  |
-| `password` | "cly:string" |  |  |  |
-| `passwordHash` | "cly:string" |  |  |  |
-| `salt` | "cly:string" |  |  | `82JLRIro7Fkg0UERaIX50x0Lm0AQ58bE8y7I19LyxNU&#x3D;` |
-| `algorithm` | "cly:string" |  |  | `sha1` |
 
+| Property | Description | Type | Required | Unique |
+| ----- | ----- | --- | --- | --- |
+| `user` | Pointer to user entity  | "cly:entity" | true |  |
+| `password` | Password string  | "cly:string" |  |  |
+| `passwordHash` | Sign code  | "cly:string" |  |  |
+| `salt` | Salt of password  | "cly:string" |  |  |
+| `algorithm` | Digest algorithm  | "cly:string" |  |  |
+
+<a name="policy-TheUserSessionResource"/>
 ### TheUserSessionResource
-| Property | Type | Required | Unique | default |
-| ----- | ----- | --- | --- | --- |
-| `user` | "cly:entity" | true |  |  |
-| `agent` | "cly:string" |  |  |  |
-| `token` | "cly:string" | true | true | `nUnN9nvJ6+NvTxgfsmCVGlOidSIrzwrKPFQk3iqBeBk&#x3D;` |
-| `since` | "cly:date" |  |  | `Fri May 05 2017 14:40:56 GMT+0900 (JST)` |
-| `lifetime` | "cly:number" |  |  | `259200000` |
 
-### TheUserVerifyResource
-| Property | Type | Required | Unique | default |
+| Property | Description | Type | Required | Unique |
 | ----- | ----- | --- | --- | --- |
-| `user` | "cly:entity" | true |  |  |
-| `target` | "cly:string" | true |  |  |
-| `token` | "cly:string" | true | true | `DE2YZHaJDp2CTZkSAOrJUKqdVa6GG6yx4+KpLqoY8Ds&#x3D;` |
-| `expiredAt` | "cly:date" |  |  |  |
-| `done` | "cly:boolean" |  |  |  |
+| `user` | Pointer to user entity | "cly:entity" | true |  |
+| `agent` | User agent | "cly:string" |  |  |
+| `token` | Session token | "cly:string" | true | true |
+| `since` | Started at | "cly:date" |  |  |
+| `lifetime` |  | "cly:number" |  |  |
+
+<a name="policy-TheUserVerifyResource"/>
+### TheUserVerifyResource
+
+| Property | Description | Type | Required | Unique |
+| ----- | ----- | --- | --- | --- |
+| `user` | Pointer to user entity  | "cly:entity" | true |  |
+| `target` | Verify target  | "cly:string" | true |  |
+| `token` | Verify token  | "cly:string" | true | true |
+| `expiredAt` | Date expire  | "cly:date" |  |  |
+| `done` | Done or not  | "cly:boolean" |  |  |
 
 
 
