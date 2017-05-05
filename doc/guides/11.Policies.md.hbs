@@ -1,0 +1,19 @@
+Policies
+--------
+
+{{#if vars.policies}}
++ {{name}}
+{{/if}}
+
+{{#each vars.policies}}
+### {{name}}
+{{#if policy}}
+| Property | Type | Required | Unique | Example |
+| ----- | ----- | --- | --- | --- |
+{{#each policy}}
+| `{{@key}}` | "{{type}}" | {{required}} | {{unique}} | {{#if default}}`{{default}}`{{/if}} |
+{{/each}}
+{{else}} No policy defined.
+{{/if}}
+
+{{/each}}

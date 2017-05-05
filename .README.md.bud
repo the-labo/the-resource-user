@@ -7,6 +7,8 @@
 const { readmeMdBud } = require('ape-tmpl')
 const pkg = require('./package.json')
 const { signature } = require('the-script-jsdoc')
+const jsdoc = require('./jsdoc.json')
+const lib = require('./lib')
 
 module.exports = readmeMdBud({
   pkg,
@@ -21,27 +23,18 @@ module.exports = readmeMdBud({
   links: require('./doc/links'),
   vars: {
     signature: signature(
-      require('./jsdoc.json'),
+      jsdoc,
       {
-        classNames: [
-          'TheUserProfileResource',
-          'TheUserProfileResourceEntity',
-          'TheUserResource',
-          'TheUserResourceEntity',
-          'TheUserRoleResource',
-          'TheUserRoleResourceEntity',
-          'TheUserSessionResource',
-          'TheUserSessionResourceEntity',
-          'TheUserSignResource',
-          'TheUserSignResourceEntity',
-          'TheUserVerifyResource',
-          'TheUserVerifyResourceEntity'
-        ],
+        classNames: jsdoc.classes.map(({ name }) => name),
         functionNames: [
           'create'
         ]
       }
     ),
+    policies: Object.keys(lib)
+      .map((name) => lib[ name ])
+      .filter(({policy}) => !!policy)
+      .map(({ name, policy }) => ({ name, policy })),
     apiPath: './doc/api/api.md'
   }
 })

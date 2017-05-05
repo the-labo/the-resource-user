@@ -156,7 +156,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-resource-user@1.0.3](./doc/api/api.md)
++ [the-resource-user@1.0.4](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
@@ -173,6 +173,68 @@ API Guide
 
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" End -->
+
+<!-- Section from "doc/guides/11.Policies.md.hbs" Start -->
+
+<a name="section-doc-guides-11-policies-md"></a>
+
+Policies
+--------
+
++ 
+
+### TheUserResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `name` | "cly:string" | true | true |  |
+| `email` | "cly:string" |  | true |  |
+| `profile` | "cly:entity" |  |  |  |
+| `sign` | "cly:entity" |  |  |  |
+| `roles` | "cly:entity" |  |  |  |
+
+### TheUserProfileResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `user` | "cly:entity" | true |  |  |
+| `name` | "cly:string" |  |  |  |
+| `image` | "cly:string" |  |  |  |
+
+### TheUserRoleResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `user` | "cly:entity" | true |  |  |
+| `code` | "cly:string" | true | true |  |
+
+### TheUserSignResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `user` | "cly:entity" | true |  |  |
+| `password` | "cly:string" |  |  |  |
+| `passwordHash` | "cly:string" |  |  |  |
+| `salt` | "cly:string" |  |  | `82JLRIro7Fkg0UERaIX50x0Lm0AQ58bE8y7I19LyxNU&#x3D;` |
+| `algorithm` | "cly:string" |  |  | `sha1` |
+
+### TheUserSessionResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `user` | "cly:entity" | true |  |  |
+| `agent` | "cly:string" |  |  |  |
+| `token` | "cly:string" | true | true | `nUnN9nvJ6+NvTxgfsmCVGlOidSIrzwrKPFQk3iqBeBk&#x3D;` |
+| `since` | "cly:date" |  |  | `Fri May 05 2017 14:40:56 GMT+0900 (JST)` |
+| `lifetime` | "cly:number" |  |  | `259200000` |
+
+### TheUserVerifyResource
+| Property | Type | Required | Unique | default |
+| ----- | ----- | --- | --- | --- |
+| `user` | "cly:entity" | true |  |  |
+| `target` | "cly:string" | true |  |  |
+| `token` | "cly:string" | true | true | `DE2YZHaJDp2CTZkSAOrJUKqdVa6GG6yx4+KpLqoY8Ds&#x3D;` |
+| `expiredAt` | "cly:date" |  |  |  |
+| `done` | "cly:boolean" |  |  |  |
+
+
+
+<!-- Section from "doc/guides/11.Policies.md.hbs" End -->
 
 
 <!-- Sections Start -->
