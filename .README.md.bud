@@ -24,7 +24,12 @@ module.exports = readmeMdBud({
       require('./jsdoc.json'),
       {
         classNames: [
-          'TheUserResource'
+          'TheUserProfileResource',
+          'TheUserResource',
+          'TheUserRoleResource',
+          'TheUserSessionResource',
+          'TheUserSignResource',
+          'TheUserVerifyResource'
         ],
         functionNames: [
           'create'
