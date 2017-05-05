@@ -20,13 +20,12 @@ describe('the-resource-user', () => {
 
     let db = new TheDb({
       dialect: 'memory'
-    }).load([
-      class extends TheUserResource {},
-      class extends TheUserResource.Sign {},
-      class extends TheUserResource.Session {},
-      class extends TheUserResource.Profile {},
-      class extends TheUserResource.Role {}
-    ])
+    })
+    db.load(class extends TheUserResource {}, 'User')
+    db.load(class extends TheUserResource.Sign {}, 'UserSign')
+    db.load(class extends TheUserResource.Session {}, 'UserSession')
+    db.load(class extends TheUserResource.Profile {}, 'UserProfile')
+    db.load(class extends TheUserResource.Role {}, 'UserRole')
 
     const {
       User, UserSign, UserSession, UserProfile, UserRole

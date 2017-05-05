@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const constants = require('../lib/Constants')
+const Constants = require('../lib/Constants')
 const { ok, equal } = require('assert')
 
 describe('constants', () => {
@@ -15,7 +15,9 @@ describe('constants', () => {
   })
 
   it('Do test', () => {
-
+    for (let name of Object.keys(Constants)) {
+      ok(Constants[ name ])
+    }
   })
 })
 

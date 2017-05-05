@@ -5,41 +5,17 @@ const {
   TheUserResource
 } = require('the-resource-user')
 
-// Define Custom classes
-const ResourceClasses = [
-  class extends TheUserResource {
-    static get nameString () {
-      return 'User'
-    }
-  },
-  class extends TheUserResource.Sign {
-    static get nameString () {
-      return 'UserSign'
-    }
-  },
-  class extends TheUserResource.Session {
-    static get nameString () {
-      return 'UserSession'
-    }
-  },
-  class extends TheUserResource.Profile {
-    static get nameString () {
-      return 'UserProfile'
-    }
-  },
-  class extends TheUserResource.Role {
-    static get nameString () {
-      return 'UserRole'
-    }
-  }
-]
-
 async function tryExample () {
-
   // Create a db instance
   let db = theDb({
     dialect: 'memory'
-  }).load(ResourceClasses)
+  })
+
+  db.load(class extends TheUserResource { /* ... */ }, 'User')
+  db.load(class extends TheUserResource.Sign { /* ... */ }, 'UserSign')
+  db.load(class extends TheUserResource.Session { /* ... */ }, 'UserSession')
+  db.load(class extends TheUserResource.Profile { /* ... */ }, 'UserProfile')
+  db.load(class extends TheUserResource.Role { /* ... */ }, 'UserRole')
 
   let {
     User,
@@ -56,8 +32,7 @@ async function tryExample () {
     user.sign = await UserSign.create({ user, password })
     user.profile = await UserProfile.create({ user, profile })
     user.roles = await UserRole.createBulk(roles.map((code) => ({ user, code })))
-    await
-      user.save()
+    await user.save()
     return user
   }
 

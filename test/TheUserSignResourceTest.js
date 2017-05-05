@@ -21,13 +21,11 @@ describe('the-user-sign-resource', () => {
 
     let db = new TheDb({
       dialect: 'memory'
-    }).load([
-      TheUserResource,
-      TheUserSignResource
-    ])
+    })
+    db.load(TheUserResource, 'User')
+    db.load(TheUserSignResource, 'UserSign')
 
-    const User = db.resources[ TheUserResource.nameString ]
-    const UserSign = db.resources[ TheUserSignResource.nameString ]
+    const { User, UserSign } = db.resources
     let user01 = await User.create({ name: 'hoge' })
     let sign01 = await UserSign.create({
       user: user01,
