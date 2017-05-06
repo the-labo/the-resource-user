@@ -1,4 +1,4 @@
-# the-resource-user@1.0.5
+# the-resource-user@1.0.6
 
 User resource for the-db
 
@@ -16,10 +16,6 @@ User resource for the-db
   + [new TheUserRoleResource()](#the-resource-user-classes-the-user-role-resource-constructor)
 + [`TheUserRoleResourceEntity`](#the-resource-user-classes) Class
   + [new TheUserRoleResourceEntity()](#the-resource-user-classes-the-user-role-resource-entity-constructor)
-+ [`TheUserSessionResource`](#the-resource-user-classes) Class
-  + [new TheUserSessionResource()](#the-resource-user-classes-the-user-session-resource-constructor)
-+ [`TheUserSessionResourceEntity`](#the-resource-user-classes) Class
-  + [new TheUserSessionResourceEntity()](#the-resource-user-classes-the-user-session-resource-entity-constructor)
 + [`TheUserSignResource`](#the-resource-user-classes) Class
   + [new TheUserSignResource()](#the-resource-user-classes-the-user-sign-resource-constructor)
 + [`TheUserSignResourceEntity`](#the-resource-user-classes) Class
@@ -153,43 +149,6 @@ Constructor of TheUserRoleResource class
 ### new TheUserRoleResourceEntity()
 
 Constructor of TheUserRoleResourceEntity class
-
-
-
-<a class='md-heading-link' name="the-resource-user-classes"></a>
-
-## `TheUserSessionResource` Class
-
-Session for user
-
-**Extends**: 
-
-+ `Resource`
-
-
-
-<a class='md-heading-link' name="the-resource-user-classes-the-user-session-resource-constructor" ></a>
-
-### new TheUserSessionResource()
-
-Constructor of TheUserSessionResource class
-
-
-
-<a class='md-heading-link' name="the-resource-user-classes"></a>
-
-## `TheUserSessionResourceEntity` Class
-
-
-
-
-
-
-<a class='md-heading-link' name="the-resource-user-classes-the-user-session-resource-entity-constructor" ></a>
-
-### new TheUserSessionResourceEntity()
-
-Constructor of TheUserSessionResourceEntity class
 
 
 

@@ -160,7 +160,6 @@ Policies
 + [TheUserProfileResource Policy](#policy-TheUserProfileResource)
 + [TheUserRoleResource Policy](#policy-TheUserRoleResource)
 + [TheUserSignResource Policy](#policy-TheUserSignResource)
-+ [TheUserSessionResource Policy](#policy-TheUserSessionResource)
 + [TheUserVerifyResource Policy](#policy-TheUserVerifyResource)
 
 <a name="policy-TheUserResource"/>
@@ -206,18 +205,6 @@ Policies
 | `salt` | Salt of password  | "cly:string" |  |  |
 | `algorithm` | Digest algorithm  | "cly:string" |  |  |
 
-<a name="policy-TheUserSessionResource"/>
-
-### TheUserSessionResource Policy
-
-| Property | Description | Type | Required | Unique |
-| ----- | ----- | --- | --- | --- |
-| `user` | Pointer to user entity | "cly:entity" | true |  |
-| `agent` | User agent | "cly:string" |  |  |
-| `token` | Session token | "cly:string" | true | true |
-| `since` | Started at | "cly:date" |  |  |
-| `lifetime` | Milliseconds to duration of the session | "cly:number" |  |  |
-
 <a name="policy-TheUserVerifyResource"/>
 
 ### TheUserVerifyResource Policy
@@ -241,7 +228,7 @@ Policies
 API Guide
 -----
 
-+ [the-resource-user@1.0.5](./doc/api/api.md)
++ [the-resource-user@1.0.6](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
@@ -249,8 +236,6 @@ API Guide
   + [TheUserResourceEntity](./doc/api/api.md#the-user-resource-entity-class)
   + [TheUserRoleResource](./doc/api/api.md#the-user-role-resource-class)
   + [TheUserRoleResourceEntity](./doc/api/api.md#the-user-role-resource-entity-class)
-  + [TheUserSessionResource](./doc/api/api.md#the-user-session-resource-class)
-  + [TheUserSessionResourceEntity](./doc/api/api.md#the-user-session-resource-entity-class)
   + [TheUserSignResource](./doc/api/api.md#the-user-sign-resource-class)
   + [TheUserSignResourceEntity](./doc/api/api.md#the-user-sign-resource-entity-class)
   + [TheUserVerifyResource](./doc/api/api.md#the-user-verify-resource-class)

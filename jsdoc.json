@@ -91,45 +91,6 @@
       }
     },
     {
-      "name": "TheUserSessionResource",
-      "description": "",
-      "extends": [
-        "Resource"
-      ],
-      "access": "",
-      "virtual": false,
-      "fires": "",
-      "constructor": {
-        "name": "TheUserSessionResource",
-        "description": "Session for user",
-        "parameters": [],
-        "examples": []
-      }
-    },
-    {
-      "name": "TheUserSessionResourceEntity",
-      "description": "",
-      "extends": [],
-      "access": "",
-      "virtual": false,
-      "fires": "",
-      "constructor": {
-        "name": "TheUserSessionResourceEntity",
-        "description": "",
-        "parameters": [],
-        "examples": []
-      },
-      "properties": [
-        {
-          "name": "expiredAt",
-          "access": "",
-          "virtual": false,
-          "description": "The date entity expired",
-          "type": ""
-        }
-      ]
-    },
-    {
       "name": "TheUserSignResource",
       "description": "",
       "extends": [
