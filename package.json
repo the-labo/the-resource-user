@@ -1,6 +1,6 @@
 {
   "name": "the-resource-user",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "User resource for the-db",
   "browser": "shim",
   "main": "lib",
