@@ -227,7 +227,7 @@ Policies
 API Guide
 -----
 
-+ [the-resource-user@2.0.0](./doc/api/api.md)
++ [the-resource-user@2.0.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
