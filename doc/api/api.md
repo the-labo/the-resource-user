@@ -1,4 +1,4 @@
-# the-resource-user@1.0.6
+# the-resource-user@2.0.0
 
 User resource for the-db
 

@@ -87,17 +87,17 @@ async function tryExample () {
 
   db.load(class extends TheUserResource { /* ... */ }, 'User')
   db.load(class extends TheUserResource.Sign { /* ... */ }, 'UserSign')
-  db.load(class extends TheUserResource.Session { /* ... */ }, 'UserSession')
   db.load(class extends TheUserResource.Profile { /* ... */ }, 'UserProfile')
   db.load(class extends TheUserResource.Role { /* ... */ }, 'UserRole')
 
   let {
     User,
     UserSign,
-    UserSession,
     UserProfile,
     UserRole
   } = db.resources
+
+  let session = {}
 
   // Signup an user
   async function signup (username, password, options = {}) {
@@ -119,15 +119,14 @@ async function tryExample () {
     if (!valid) {
       throw new Error('Signin failed!')
     }
-    let { token, expiredAt } = await UserSession.create({ agent, sign })
     await user.sync()
-    return { token, expiredAt, user }
+    session.signed = user
+    return user
   }
 
   // Finish session
   async function signout (token) {
-    let session = await UserSign.only({ token })
-    return session && session.destroy()
+    delete session.signed
   }
 
   // Call the functions
@@ -228,7 +227,7 @@ Policies
 API Guide
 -----
 
-+ [the-resource-user@1.0.6](./doc/api/api.md)
++ [the-resource-user@2.0.0](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-resource-user-function-create)
   + [TheUserProfileResource](./doc/api/api.md#the-user-profile-resource-class)
   + [TheUserProfileResourceEntity](./doc/api/api.md#the-user-profile-resource-entity-class)
